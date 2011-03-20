@@ -14,8 +14,16 @@ class Github
   def projects
     return YAML::load(File.read('tmp/projects.yml')) if File.exists?('tmp/projects.yml')
     # get all projects
-    projects = devs.map(&:repositories).flatten
-  
+    
+    projects = []
+    devs.each do |d|
+      begin
+       projects << d.repositories
+      rescue
+        
+      end
+    end
+    
     # select only popular and non forked repos
     projects = projects.select do |repo|
       repo.watchers > 3 && !repo.fork
