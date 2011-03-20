@@ -23,7 +23,7 @@ class Github
         
       end
     end
-    
+    projects.flatten!
     # select only popular and non forked repos
     projects = projects.select do |repo|
       repo.watchers > 3 && !repo.fork
