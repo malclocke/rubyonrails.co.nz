@@ -1,16 +1,6 @@
 <div class='panel third block_list' id='twitter'>
   <h2>Twitter #rornz</h2>
   <ul>
-    <% 0.times do |n| %>
-      <li>
-        <% if rand(2) == 1 %>
-          <%= image_tag('dave.jpg', :align => "left") %> This is the tweet. A portal for New Zealand Rails developers to discover each other and their projects.
-        <% else %>
-          <%= image_tag('eaden.jpg', :align => "left") %> This is the tweet. A portal for New Zealand Rails developers to discover each other and their projects.
-        <% end %>
-      </li>
-    <% end %>
-    
     <script src="http://widgets.twimg.com/j/2/widget.js"></script>
     <script>
     new TWTR.Widget({
