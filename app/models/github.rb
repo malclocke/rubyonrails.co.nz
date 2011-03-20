@@ -8,7 +8,7 @@ class Github
     File.open('tmp/devs.yml', 'w') do |f|
       f.write @devs.to_yaml
     end
-    @followers
+    @devs
   end
   
   def projects
