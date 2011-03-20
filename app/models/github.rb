@@ -20,7 +20,7 @@ class Github
         projects << YAML::load(File.read(file))
       else
           begin # github returns 403 if API limit exceeded
-            user_projects = select_projects(d.repositories)
+            user_projects = select_projects(dev.repositories)
             projects << user_projects
             File.open(file, 'w') do |f|
               f.write user_projects.to_yaml
@@ -42,7 +42,7 @@ class Github
       projects.select do |repo|
         repo.watchers > 3 && !repo.fork
       end.select do |repo|
-        repo.languages.sort_by{|k,v| v}.reverse.first.first == 'Ruby' rescue false
+        repo.languages.keys.include? 'Ruby' rescue false
       end
     end
   
