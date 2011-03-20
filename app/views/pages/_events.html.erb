@@ -1,0 +1,17 @@
+<div class='panel third block_list' id='events'>
+  <h2>Upcoming Events</h2>
+  <ul>
+    <% @events.each do |event| %>
+      <li class='clearfix'>
+        <% event_date = parse_date(event['summary']) %>
+        <span class='calendar clearfix'>
+          <span class='month'>
+            <%= event_date.strftime("%b") %>
+          </span>
+          <%= event_date.strftime("%d") %>
+        </span>
+        <%= event['title'] %>
+      </li>
+    <% end %>
+  <ul>
+</div>

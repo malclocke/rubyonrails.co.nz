@@ -1,0 +1,10 @@
+<div id='developers' class='panel half'>
+  <h2>Developers</h2>
+  <ul>
+    <% @developers.each do |developer| %>
+      <li>
+        <%= link_to image_tag("http://gravatar.com/avatar/#{developer.gravatar_id}?s=48", :alt => developer.login), "http://github.com/#{developer.login}" %>
+      </li>
+    <% end %>
+  </ul>
+</div>

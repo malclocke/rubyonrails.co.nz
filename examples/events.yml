@@ -1,0 +1,28 @@
+--- 
+- category: 
+    term: http://schemas.google.com/g/2005#event
+    scheme: http://schemas.google.com/g/2005#kind
+  author: 
+    name: RoR NZ
+  title: "RailsCamp NZ #1"
+  published: "2011-03-20T01:30:08.000Z"
+  id: http://www.google.com/calendar/feeds/2si764v3mdv3b7vm3vie3s0hdg%40group.calendar.google.com/public/basic/242v1thljmsbk15pflohs7m2dg
+  content: "When: Fri 18 Mar 2011 17:00 to Mon 21 Mar 2011 09:00\xC2\xA0\n\
+    NZDT<br />\n\n\
+    <br />Where: Camp Kaitoke, Wellington Region, NZ\n\
+    <br />Event Status: confirmed"
+  link: 
+  - href: http://www.google.com/calendar/event?eid=MjQydjF0aGxqbXNiazE1cGZsb2hzN20yZGcgMnNpNzY0djNtZHYzYjd2bTN2aWUzczBoZGdAZw
+    title: alternate
+    rel: alternate
+    type: text/html
+  - href: http://www.google.com/calendar/feeds/2si764v3mdv3b7vm3vie3s0hdg%40group.calendar.google.com/public/basic/242v1thljmsbk15pflohs7m2dg
+    rel: self
+    type: application/atom+xml
+  summary: |-
+    When: Fri 18 Mar 2011 17:00 to Mon 21 Mar 2011 09:00&nbsp;
+    NZDT<br>
+    
+    <br>Where: Camp Kaitoke, Wellington Region, NZ
+    <br>Event Status: confirmed
+  updated: "2011-03-20T01:31:58.000Z"

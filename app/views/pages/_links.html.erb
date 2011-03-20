@@ -1,0 +1,29 @@
+<div class='panel third'>
+  <h2>Links</h2>
+  <h3>Mailing Lists</h3>
+  <ul>
+    <% ['Auckland', 'Christchurch', 'Wellington'].each do |city|%>
+      <li>
+        <%= link_to city, "#" %>
+      </li>
+    <% end %>
+  </ul>
+  <h3>Working with Rails</h3>
+  <ul>
+    <li>
+      <%= link_to "List of Companies", "http://workingwithrails.com/browse/companies/country/New+Zealand"%>
+    </li>
+    <li>
+      <%= link_to "List of People", "http://workingwithrails.com/browse/people/country/New+Zealand"%>
+    </li>
+  </ul>
+  <h3>Other Sites</h3>
+  <ul>
+    <li>
+      <%= link_to "Rails Camp", "http://railscamp.com" %>
+    </li>
+    <li>
+      <%= link_to "Oceania Website", "#" %>  
+    </li>
+  </ul>
+</div>

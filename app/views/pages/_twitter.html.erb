@@ -1,0 +1,49 @@
+<div class='panel third block_list' id='twitter'>
+  <h2>Twitter #rornz</h2>
+  <ul>
+    <% 0.times do |n| %>
+      <li>
+        <% if rand(2) == 1 %>
+          <%= image_tag('dave.jpg', :align => "left") %> This is the tweet. A portal for New Zealand Rails developers to discover each other and their projects.
+        <% else %>
+          <%= image_tag('eaden.jpg', :align => "left") %> This is the tweet. A portal for New Zealand Rails developers to discover each other and their projects.
+        <% end %>
+      </li>
+    <% end %>
+    
+    <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+    <script>
+    new TWTR.Widget({
+      version: 2,
+      type: 'search',
+      search: '#eqnz',
+      interval: 6000,
+      title: '',
+      subject: '',
+      width: 'auto',
+      height: 300,
+      theme: {
+        shell: {
+          background: '#ffffff',
+          color: '#ffffff'
+        },
+        tweets: {
+          background: '#ffffff',
+          color: '#333333',
+          links: '#0033cc'
+        }
+      },
+      features: {
+        scrollbar: true,
+        loop: true,
+        live: true,
+        hashtags: true,
+        timestamp: true,
+        avatars: true,
+        toptweets: true,
+        behavior: 'default'
+      }
+    }).render().start();
+    </script>
+  </ul>
+</div>
