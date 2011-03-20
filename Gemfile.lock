@@ -45,6 +45,8 @@ GEM
     mechanize (1.0.0)
       nokogiri (>= 1.2.1)
     mime-types (1.16)
+    mysql (2.8.1)
+    mysql2 (0.2.6)
     nokogiri (1.4.4)
     octopi (0.4.0)
       api_cache
@@ -81,6 +83,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  mysql
+  mysql2
   octopi
   rails (= 3.0.5)
   sqlite3
