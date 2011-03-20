@@ -11,6 +11,7 @@ class PagesController < ApplicationController
   
   def reset
     begin
+      # TODO, this will be a cron job
       ['events', 'devs', 'projects'].each do |file|
         File.unlink("tmp/#{file}.yml")
       end

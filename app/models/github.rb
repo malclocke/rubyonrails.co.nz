@@ -12,35 +12,39 @@ class Github
   end
   
   def projects
-    return YAML::load(File.read('tmp/projects.yml')) if File.exists?('tmp/projects.yml')
-    # get all projects
     
     projects = []
-    devs.each do |d|
-      begin
-       projects << d.repositories
-      rescue
-        
+    devs.each do |dev|
+      file = "tmp/projects-from-#{dev.login}.yml"
+      if File.exists?(file)
+        projects << YAML::load(File.read(file))
+      else
+          begin # github returns 403 if API limit exceeded
+            user_projects = select_projects(d.repositories)
+            projects << user_projects
+            File.open(file, 'w') do |f|
+              f.write user_projects.to_yaml
+            end
+          rescue Exception => e
+            Rails.logger.warn "API ISSUE: #{e}"
+          end       
       end
     end
-    projects.flatten!
-    # select only popular and non forked repos
-    projects = projects.select do |repo|
-      repo.watchers > 3 && !repo.fork
-    end
 
-    projects = projects.select do |repo|
-      repo.languages.sort_by{|k,v| v}.reverse.first.first == 'Ruby' rescue false
-    end
+    projects.flatten!
   
-    @projects = projects.sort_by(&:watchers).reverse
+    projects.sort_by(&:watchers).reverse
     
-    File.open('tmp/projects.yml', 'w') do |f|
-      f.write @projects.to_yaml
-    end
-    
-    @projects
   end
+  
+  private
+    def select_projects(projects)
+      projects.select do |repo|
+        repo.watchers > 3 && !repo.fork
+      end.select do |repo|
+        repo.languages.sort_by{|k,v| v}.reverse.first.first == 'Ruby' rescue false
+      end
+    end
   
 end
 
