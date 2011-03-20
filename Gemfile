@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+gem 'rack', '1.2.1'
 gem 'rails', '3.0.5'
 gem 'octopi'
 # Bundle edge Rails instead:
