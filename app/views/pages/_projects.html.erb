@@ -3,7 +3,10 @@
   <ul>
     <% @projects.each do |project| %>
       <li>
-        <%= link_to project.name, project.url %> <%= project.watchers %> watchers.
+        <%= link_to project.name, project.url %>
+        <span class='watches'>
+          <%= project.watchers %> watchers
+        </span>
       </li>
     <% end %>
   </ul>
