@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   def home
     github = Github.new
     
-    @developers = github.devs
+    @developers = github.devs.sort_by{rand}
     @projects = github.projects
     
     @events = RailsCalendar.new.events
