@@ -86,6 +86,6 @@ DEPENDENCIES
   mysql
   mysql2
   octopi
-  rack (= 1.2.1)
+  rack (= 1.2.2)
   rails (= 3.0.5)
   sqlite3
