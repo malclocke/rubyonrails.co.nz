@@ -5,7 +5,7 @@
     <script>
     new TWTR.Widget({
       version: 2,
-      type: 'search',
+      type: 'list',
       search: '#rornz',
       interval: 6000,
       title: '',
@@ -33,7 +33,7 @@
         toptweets: true,
         behavior: 'default'
       }
-    }).render().start();
+    }).render().setList('malclocke', 'railsnz').start();
     </script>
   </ul>
 </div>
