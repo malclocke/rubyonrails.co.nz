@@ -91,6 +91,13 @@ h2 {
   display: block;
 }
 
+#developers ul li a:hover{
+  -webkit-transform:scale(2.0);
+  -webkit-transition-duration: 0.3s;
+  -moz-transform:scale(2.0);
+  -moz-transition-duration: 0.3s
+}
+
 .panel {
   background: white;
   -moz-box-shadow: 2px 2px 5px #BBB;

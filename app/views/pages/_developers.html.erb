@@ -3,7 +3,7 @@
   <ul class='clearfix'>
     <% @developers.each do |developer| %>
       <li>
-      <%= link_to image_tag("http://gravatar.com/avatar/#{developer.gravatar_id}?s=48", :alt => developer.login, :title => developer.login), "http://github.com/#{developer.login}" %>
+      <%= link_to image_tag("http://gravatar.com/avatar/#{developer.gravatar_id}?s=96", :alt => developer.login, :title => developer.login, :size => '48x48'), "http://github.com/#{developer.login}" %>
       </li>
     <% end %>
   </ul>
