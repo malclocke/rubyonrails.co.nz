@@ -6,7 +6,7 @@ class PagesController < ApplicationController
     @developers = github.devs.sort_by{rand}
     @projects = github.projects
     
-    @events = RailsCalendar.new.events
+    @events = RailsCalendar.new.future
   end
   
   def reset
